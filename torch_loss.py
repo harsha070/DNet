@@ -64,7 +64,7 @@ def compute_residual(self, property_type, diffusion_coefficient, source_term, y_
                 residual_pred -= (grad_pressure_y(self, p_pred, i, j) / self.density)
                 residual_pred += self.gravity
     
-    return residual_pred
+    return residual_pred ** 2
 
 
 def vel_south(self, u_pred, v_pred, i, j):
